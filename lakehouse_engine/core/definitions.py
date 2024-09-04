@@ -86,6 +86,7 @@ class InputFormat(Enum):
     CSV = "csv"
     PARQUET = "parquet"
     DELTAFILES = "delta"
+    ICEBERGFILES = "iceberg"
     CLOUDFILES = "cloudfiles"
     KAFKA = "kafka"
     SQL = "sql"
@@ -123,6 +124,7 @@ FILE_INPUT_FORMATS = [
     InputFormat.PARQUET.value,
     InputFormat.CSV.value,
     InputFormat.DELTAFILES.value,
+    InputFormat.ICEBERGFILES.value,
     InputFormat.CLOUDFILES.value,
 ]
 
@@ -136,6 +138,7 @@ class OutputFormat(Enum):
     CSV = "csv"
     PARQUET = "parquet"
     DELTAFILES = "delta"
+    ICEBERGFILES = "iceberg"
     KAFKA = "kafka"
     CONSOLE = "console"
     NOOP = "noop"
@@ -173,6 +176,7 @@ FILE_OUTPUT_FORMATS = [
     OutputFormat.PARQUET.value,
     OutputFormat.CSV.value,
     OutputFormat.DELTAFILES.value,
+    OutputFormat.ICEBERGFILES.value,
 ]
 
 
