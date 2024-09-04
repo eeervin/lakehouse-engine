@@ -65,7 +65,7 @@ class TableWriter(Writer):
                 self._write_to_table_in_streaming_mode(df_writer, self._output_spec)
 
         if (
-            self._output_spec.data_format != OutputFormat.DELTAFILES.value
+            self._output_spec.data_format not in (OutputFormat.DELTAFILES.value, OutputFormat.ICEBERGFILES.value)
             and self._output_spec.partitions
         ):
             ExecEnv.SESSION.sql(f"MSCK REPAIR TABLE {self._output_spec.db_table}")
